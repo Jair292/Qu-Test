@@ -6,7 +6,7 @@ import { PlanetComponent } from "./components/planet/planet.component";
 import { DisplayDetailT } from './types/types';
 import { PlanetInfoDetailComponent } from './components/planet-info-detail/planet-info-detail.component';
 import { CommonModule } from '@angular/common';
-import { SortPipe } from './pipes/planet-sort.pipe';
+import { SortPipe } from './pipes/array-object-sort.pipe';
 import { mockPlanets } from './constants/mocks-constanst';
 
 @Component({
@@ -29,9 +29,9 @@ export class AppComponent implements OnInit{
   constructor (private dataService: dataService) {}
 
   async ngOnInit() {
-    // this.planetResponse = await lastValueFrom(this.dataService.getPlanets({search: false, searchQ: ''}));
+    this.planetResponse = await lastValueFrom(this.dataService.getPlanets({search: false, searchQ: ''}));
     // mock response for service down
-    this.planetResponse = mockPlanets;
+    // this.planetResponse = mockPlanets;
   }
 
   displayDetail(event: DisplayDetailT) {
