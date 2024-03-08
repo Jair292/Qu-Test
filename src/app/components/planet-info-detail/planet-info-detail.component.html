@@ -1,0 +1,20 @@
+<!-- Dynamic definition of elements -->
+@if(detailConfig) {
+  <div class="detail-title">
+    {{detailConfig.property}}
+  </div>
+  @for (element of detailConfig.detail ; track $index) {
+    <div class="detailed-element">
+      @for (property of element | ObjectKeys ; track $index) {
+        @if (allowedProperty(property)) {
+          <span class="info-set">
+            <span class="property-name">{{ property }}:</span>  
+            <span class="property-value"> {{ propertyValue(element, property) }}</span>
+          </span>
+        }
+      }
+    </div>
+  }
+} @else {
+  <span>...loading</span>
+}

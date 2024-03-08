@@ -1,0 +1,110 @@
+:host {
+  display: block;
+}
+
+.planet-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .planet-info {
+    padding: 5px;
+    border: 2px solid var(--bright-blue);
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-flow: column;
+    width: 286px;
+
+    .element-drill {
+      display: flex;
+      justify-content: space-between;
+    }
+    .element {
+      font-size: var(--body-font-size);
+      margin: 3px 0 3px 0;
+    }
+    .title {
+      font-size: var(--title-font-size);
+      color: var(--bright-blue);
+      text-align: center;
+    }
+  }
+  
+  .button {
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+    width: 300px;
+    &:hover,
+    :focus {
+      opacity: 0.8;
+    }
+  }
+  .button-main {
+    background-color: var(--bright-blue);
+    &.open {
+      border-radius: 8px 8px 0px 0px;
+    }
+  }
+  
+  .button-secondary {
+    background-color:  var(--electric-violet);
+  }
+}
+
+.gg-arrow-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 15px;
+  height: 15px;
+  margin: 3px 0 3px 0;
+ }
+ 
+ .gg-arrow-down::after,
+ .gg-arrow-down::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 4px;
+ }
+ 
+ .gg-arrow-down::after {
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg);
+  left: 5px;
+ }
+ 
+ .gg-arrow-down::before {
+  width: 2px;
+  height: 10px;
+  left: 8px;
+  background: currentColor;
+ } 

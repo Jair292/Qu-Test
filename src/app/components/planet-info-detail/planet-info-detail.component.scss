@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-flow: column;
+}
+
+.detail-title {
+  font-size: var(--title-font-size);
+  color: var(--electric-violet);
+  text-transform: capitalize;
+}
+.detailed-element {
+  display: flex;
+  flex-flow: column;
+
+  .info-set {
+    font-size: var(--body-font-size);
+    margin-top: 3px;
+  }
+}

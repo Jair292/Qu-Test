@@ -1,0 +1,31 @@
+<!-- Static definition of properties -->
+@if(planet) {
+  <div class="planet-content">
+    <button class="button button-main" #planetInfoButton (click)="planetInfo()">{{ planet.name }}</button>
+  @if(displayPlanetInfo) {
+    <div class="planet-info">
+      <span class="title">General Information</span>
+      <span class="element">Climate: {{ planet.climate }}</span>
+      <span class="element">Surface water: {{ planet.surface_water || 0 }}</span>
+      <span class="element">Terrain: {{ planet.terrain }}</span>
+      <span class="element">Gravity: {{ planet.gravity || 0 }}</span>
+      <span class="element">Diameter: {{ planet.diameter || 0 }}</span>
+      <span class="element">Orbital period: {{ planet.orbital_period || 0 }}</span>
+      <span class="element">Rotation period: {{ planet.rotation_period || 0 }}</span>
+      <div class="element-drill">
+        <span class="element" (click)="bindProperty('films', planet.films)">Films: {{ planet.films?.length || 0 }}</span>
+        @if (planet.films?.length) {
+          <span class="gg-arrow-down" (click)="bindProperty('films', planet.films)"></span>
+        }
+      </div>
+      <span class="element">Population: {{ planet.population || 0  }}</span>
+      <div class="element-drill">
+        <span class="element">Residents: {{ planet.residents?.length || 0 }}</span>
+        @if (planet.residents?.length) {
+          <span class="gg-arrow-down" (click)="bindProperty('residents', planet.residents)"></span>
+        }
+      </div>
+    </div>
+  }
+  </div>
+}
