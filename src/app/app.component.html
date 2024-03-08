@@ -9,7 +9,11 @@
           click on any planet!
         </span>
         <div class="planets-collection">
-          @for(planet of planetResponse.results; track $index) {
+          <div class="tools-section">
+            <span class="sorting-text">Sort Planets</span>
+            <span #sortingButton class="gg-arrow-down" (click)="changeSortDirection()"></span>
+          </div>
+          @for(planet of planetResponse.results | sortP: 'name' : sortDirection; track $index) {
             <div class="planet-element">
               <planet [planet]="planet" (displayDetail)="displayDetail($event)"></planet>
             </div>

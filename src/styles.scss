@@ -2,3 +2,73 @@
 * {
   font-family: var(--inter-font);
 }
+
+.gg-arrow-up {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 15px;
+  height: 15px;
+  margin: 3px 0 3px 0;
+ }
+ 
+ .gg-arrow-up::after,
+ .gg-arrow-up::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+ }
+ 
+ .gg-arrow-up::after {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 5px;
+ }
+ 
+ .gg-arrow-up::before {
+  width: 2px;
+  height: 10px;
+  left: 8px;
+  background: currentColor;
+ }
+
+ .gg-arrow-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 15px;
+  height: 15px;
+  margin: 3px 0 3px 0;
+ }
+ 
+ .gg-arrow-down::after,
+ .gg-arrow-down::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 4px;
+ }
+ 
+ .gg-arrow-down::after {
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg);
+  left: 5px;
+ }
+ 
+ .gg-arrow-down::before {
+  width: 2px;
+  height: 10px;
+  left: 8px;
+  background: currentColor;
+ } 

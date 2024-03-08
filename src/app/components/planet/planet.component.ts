@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { AllwedPropertiesForDrillT, FilmT, ResidentT, PlanetT, DisplayDetailT } from '../../types/types';
 import { dataService } from '../../services/data.service';
 import { FILMS, RESIDENTS } from '../../constants/services-constants';

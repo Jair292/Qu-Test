@@ -78,7 +78,7 @@ main {
     flex-flow: column;
 
     .left-side-hint {
-      font-size: 12px;
+      font-size: var(--body-font-size);
       text-align: center;
       margin-top: 10px;
     }
@@ -93,7 +93,19 @@ main {
       .planet-element {
         margin: 7.5px;
         display: block;
-      }  
+      }
+      .tools-section {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 300px;
+        margin: auto;
+
+        .sorting-text {
+          font-size: var(--body-font-size);
+          text-align: center;
+        }
+      }
     }
   }
 
@@ -112,7 +124,6 @@ main {
       }
     }
   }
-  
 }
 
 .content h1 {
